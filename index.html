@@ -1,0 +1,18 @@
+<html>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var soket = io.connect();
+var isim = prompt("Lütfen isminizi giriniz");
+soket.emit("gonder",isim);
+soket.on("al",function(veri)
+{
+if(veri != isim)
+{
+alert(veri +" Sisteme Girdi");
+]
+])
+</script>
+<h1>Hello world</h1>
+</body>
+</html>

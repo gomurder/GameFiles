@@ -1,17 +1,8 @@
-var express = require('express');
-var app = express();
 var sunucu = app.listen('3000');
 var io = require('socket.io').listen(sunucu);
 var yol = require('path');
 var shortid = require('shortid');
-var mysql = require('mysql');
 
-var con = mysql.createConnection({
-	host: "localhost",
-	user: "root",
-	password: "",
-	database: "nodejs"
-  });
   var playerCount = 0;
 io.on('connection',function(socket){
 	var thisClientId = shortid.generate();
